@@ -1,8 +1,6 @@
-# Uniqloshopper
+# UniqloShopper
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/uniqloshopper`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem provides shoppers information about the products listed on Uniqlo’s Men’s T-Shirt section. This gem provides the name, price, and URL for each product listed.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-The gem begins by running uniqlo_shopper in the bin directory. The gem will then provide you with the name of each product in numerical order in a list view. To see more information on a product, simply enter the corresponding number for the current price and URL. After, you can choose to see the list again by entering list or typing exit to exit.
+The gem begins by running uniqlo_shopper in the bin directory. The gem will then provide you with the name of each product in numerical order in a list view. To see more information on a product, simply enter the corresponding number for the current price and URL. You can then choose to see the list again by entering list or typing exit to exit.
 
 ## Development
 
@@ -41,3 +39,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the Uniqloshopper project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'agile-archiver-4905'/uniqloshopper/blob/master/CODE_OF_CONDUCT.md).
+

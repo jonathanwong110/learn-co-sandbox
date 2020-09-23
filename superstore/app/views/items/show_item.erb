@@ -1,0 +1,36 @@
+<h1 class="logo"><a href="/users/<%=current_user.id%>">Home</a></h1>
+  <ul class="main-nav">
+      <a href="/items">Items for Sale | </a>
+      <a href="/items/new">Create a New Item | </a>
+      <a href="/users">View Users | </a>
+      <a href="/messages">View Messages | </a>
+      <a href="/messages/new">New Message | </a>
+      <a href="/logout">Log Out</a>
+  </ul>
+<h2> Welcome <%=current_user.username %>! </h2>
+  
+  <% if flash.has?(:message) %>
+    <%= flash[:message] %>
+  <% end %>
+  
+  <p> ____________________ </p>
+  <p><strong>Title: </strong><%= @item.title.capitalize %></p>
+  <p><strong>Price: $</strong><%= @item.price %></p>
+  <p><strong>Description: </strong><%= @item.description.capitalize %> </p>
+  <p><strong>Seller: </strong><%= @item.user.username %> </p>
+  <p><strong>Seller's Location: </strong><%= @item.user.location %></p>
+  <a href="/users/<%=@item.user.id%>">View User </a>
+  <p> ____________________ </p>
+    
+  <% if current_user.id == @item.user_id%>
+    <form action="/items/<%=@item.id%>/edit">
+      <input type="submit" value="Edit Item">
+    </form>
+  <% end %>
+  <br></br>
+  
+  <% if current_user.id == @item.user_id%>
+    <form method="post" action="/items/<%=@item.id%>/delete">
+      <input type="submit" value="Delete Item">
+    </form>
+  <% end %>

@@ -1,0 +1,24 @@
+<h1 class="logo"><a href="/users/<%=current_user.id%>">Home</a></h1>
+  <ul class="main-nav">
+      <a href="/items">Items for Sale | </a>
+      <a href="/items/new">Create a New Item | </a>
+      <a href="/users">View Users | </a>
+      <a href="/messages">View Messages | </a>
+      <a href="/messages/new">New Message | </a>
+      <a href="/logout">Log Out</a>
+  </ul>
+
+<h2>Welcome <%= current_user.username %>!</h2>
+<h3>New Message</h3>
+
+<% if flash.has?(:error) %>
+  <%= flash[:error] %>
+<% end %><br></br>
+
+  <form action='/messages' method="post">
+    Message:
+    <input type="text" name="content" id="content">
+    Recipient:
+    <input type="text" name="recipient" id="recipient">
+    <input type="submit" name="submit" value="Send Message">
+  </form>

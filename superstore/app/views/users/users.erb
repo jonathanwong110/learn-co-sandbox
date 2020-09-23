@@ -1,0 +1,19 @@
+<h1 class="logo"><a href="/users/<%=current_user.id%>">Home</a></h1>
+  <ul class="main-nav">
+      <a href="/items">Items for Sale | </a>
+      <a href="/items/new">Create a New Item | </a>
+      <a href="/users">View Users | </a>
+      <a href="/messages">View Messages | </a>
+      <a href="/messages/new">New Message | </a>
+      <a href="/logout">Log Out</a>
+  </ul>
+<h2> Welcome <%=current_user.username %>! </h2>
+<h3> List of Users </h2>
+<p> ____________________ </p>
+<% @users.each do |user| %>
+  <p><strong>Username: </strong><%= user.username %></p>
+  <p><strong>Seller's Location: </strong><%= user.location %></p>
+  <a href="/users/<%=user.id%>">View User's Listings</a>
+  <p> ____________________ </p>
+<% end %>
+ <br>

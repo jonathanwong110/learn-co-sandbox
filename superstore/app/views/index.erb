@@ -1,0 +1,8 @@
+<h1>Welcome to SuperStore</h1>
+
+<% if flash.has?(:message) %>
+  <%= flash[:message] %>
+<% end %> <br></br>
+
+<a href="/login">Log In | </a>
+<a href="/signup">Sign Up</a>
